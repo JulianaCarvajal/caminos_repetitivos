@@ -12,4 +12,5 @@ else:
         people = 2**(i)
         print(f'En la generación {i} hay {people} personas.')
     print(f'El número total de personas, hasta la generación {i+1}, es: {2**(i+1)}.')
-    
+
+
