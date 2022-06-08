@@ -2,24 +2,23 @@
 genere un tablero, como en la siguiente imagen (Es un tablero con una longitud de 8x8):
 """
 
-linea_llena = "***"
-linea_vacia = "   "
+full_line = "***"
+empty_line = "   "
 
 size = int(input('Ingrese la longitud del tablero: '))
 
-tablero = ''
+board = ''
 if size == 1:
-    tablero = 3*(linea_vacia + "\n")
+    board = 3*(empty_line + "\n")
 elif size%2 == 0:
-    linea_1 = 3*(int(size/2)*(linea_vacia + linea_llena) + "\n")
-    linea_2 = 3*(int(size/2)*(linea_llena + linea_vacia) + "\n")
+    line_1 = 3*(int(size/2)*(empty_line + full_line) + "\n")
+    line_2 = 3*(int(size/2)*(full_line + empty_line) + "\n")
     for i in range(int(size/2)):
-        tablero += linea_1 + linea_2
+        board += line_1 + line_2
 else:
-    linea_1 = 3*(linea_vacia + int((size-1)/2)*(linea_llena + linea_vacia) + "\n")
-    linea_2 = 3*(linea_llena + int((size-1)/2)*(linea_vacia + linea_llena) + "\n")
+    line_1 = 3*(empty_line + int((size-1)/2)*(full_line + empty_line) + "\n")
+    line_2 = 3*(full_line + int((size-1)/2)*(empty_line + full_line) + "\n")
     for i in range(int((size-1)/2)):
-        tablero += linea_1 + linea_2
-    tablero += linea_1
-print(tablero)
-
+        board += line_1 + line_2
+    board += line_1
+print(board)
