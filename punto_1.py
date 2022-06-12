@@ -1,10 +1,38 @@
-"""Report sightings of creatures and the direction
-of the ship from which they appear, correctly.
+"""El capitán del barco pirata Thousand Sunny, el famoso Monkey D. Luffy te ha designado
+para que sirva de vigía en el mástil principal. Esto es lo que te ha dicho el capitán:
+    
+    Tu misión es simple marinero, pero importante para la tripulación,
+    cuando veas alguna de estas criaturas debes decirlo de esta manera:
+    
+    •¡Ahoy! capitán, un Kraken
+    •¡Ahoy! capitán, unas Sirenas
+    •¡Ahoy! capitán, una Ballena
+    •¡Ahoy! capitán, un Hipocampo
+    •¡Ahoy! capitán, una Macaraprono
+    •¡Ahoy! capitán, un Pulpo
+    •¡Ahoy! capitán, unos Leviatanes
+    •¡Ahoy! capitán, Unas Hidras
+    
+    Tu vida va en ello marinero, debes pronunciarlos con el articulo correcto
+    de acuerdo con su especie (uno, una, unos, unas).
+    
+    Además, debes decirla dirección del barco por la que aparece la criatura:
+    
+    •A babor
+    •A estribor
+    •Por la proa
+    •Por la popa
+    
+Para cumplir la misión debes crear un programa que, dada la criatura y la ubicación, construya la cadena
+correcta. El programa se debe ejecutar las veces que sea necesario hasta que el capital te diga “stop”.
 
-Do this until the captain says "stop".
+Por ejemplo, si aparecen:
+
+•Kraken y Babor debe decir: ¡Ahoy! capitán, un Kraken a babor.
+•Leviatanes y Proa debe decir: ¡Ahoy! capitán, unos Leviatanes por la proa.
+
+Y así hasta que ingresen la palabra para detener el programa.
 """
-
-#import random
 
 creatures = ['Kraken', 'Sirenas', 'Ballena', 'Hipocampo', 'Macaraprono',
              'Pulpo', 'Leviatanes', 'Hidras']
@@ -12,9 +40,7 @@ locations = ['Babor', 'Estribor', 'Proa', 'Popa']
 
 word = ''
 while word != 'stop':
-    #creature = creatures[random.randint(0, len(creatures) - 1)]
-    #location = locations[random.randint(0, len(locations) - 1)]
-    
+
     creature = input('Criatura: ')
     if creature not in creatures:
         print('Criatura inválida.')
